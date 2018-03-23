@@ -1,0 +1,12 @@
+<div class="answer" [class.clicked]="clicked" (click)="onClick()">
+    <span *ngIf="touched && answer.correct" class="correct">&#10003;</span>
+    <span *ngIf="touched && !answer.correct" class="wrong">&#10060;</span>
+    <span *ngIf="!touched" class="space"></span>
+    {{ answer.desc }}
+    <div class="wrong_because" *ngIf="clicked && !answer.correct">
+      {{ answer.wrong_because }}
+    </div>
+    <div class="correct_because" *ngIf="clicked && answer.correct">
+        {{ answer.correct_because }}
+    </div>
+</div>

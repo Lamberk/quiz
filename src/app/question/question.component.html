@@ -1,0 +1,12 @@
+<div>
+    <h1>{{question.desc}}</h1>
+    <app-answer
+      *ngFor="let a of question.answers"
+      [answer]="a"
+      [clicked]="a.clicked"
+      [touched]="a.touched"
+      (answered)="answerClicked(a)"
+      >
+    </app-answer>
+    <button *ngIf="disabled" (click)="finishQuestion(question)">Продолжить</button>
+  </div>

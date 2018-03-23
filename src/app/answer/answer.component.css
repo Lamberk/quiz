@@ -1,0 +1,34 @@
+.answer {
+  position: relative;
+  padding: 22px 0;
+  border-bottom: 1px solid #f2f4ee;
+}
+
+.correct {
+  color: green;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+
+.clicked {
+  background-color:#fefbe2;
+  padding: 13px 0;
+}
+
+.correct_because {
+  color: green;
+  font-size: 14px;
+  margin-left: 26px;
+}
+
+.wrong_because {
+  color: red;
+  font-size: 14px;
+  margin-left: 26px;
+}
+
+.space {
+  display: inline-block;
+  width: 21px;
+}

@@ -1,0 +1,15 @@
+<div class="container">
+	<div *ngIf="!questions">Loading questions...</div>
+
+	<ng-container *ngFor="let q of questions; let i = index">
+		<app-question *ngIf="i === currentIndex" [question]="q" (answered)="questionDone(q)"></app-question>
+	</ng-container>
+
+
+	<div *ngIf="done">
+		<div class="container">
+			<img src="/assets/img/{{ score }}.jpg">
+			<h1>Score: {{ score }}</h1>
+		</div>
+	</div>
+</div>
