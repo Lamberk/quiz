@@ -3,10 +3,14 @@
     <span *ngIf="touched && !answer.correct" class="wrong">&#10060;</span>
     <span *ngIf="!touched" class="space"></span>
     {{ answer.desc }}
-    <div class="wrong_because" *ngIf="clicked && !answer.correct">
+    <div style="max-width:70%;" class="wrong_because" *ngIf="clicked && !answer.correct">
       {{ answer.wrong_because }}
+      <br><br>
+    <img *ngIf="answer.image" src="{{ answer.image }}">  
     </div>
     <div class="correct_because" *ngIf="clicked && answer.correct">
         {{ answer.correct_because }}
+    <br><br>
+    <img *ngIf="answer.image" src="{{ answer.image }}">  
     </div>
 </div>

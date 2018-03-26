@@ -7,9 +7,38 @@
 
 
 	<div *ngIf="done">
-		<div class="container">
-			<img src="/assets/img/{{ score }}.jpg">
-			<h1>Score: {{ score }}</h1>
+		<div  class="container">
+			<h1><b>Ваш результат {{score}} из 10</b></h1>
+			
+		<div	*ngIf="score <= 2">
+			<img style="max-width:750px;" src="/assets/img/lapki.jpg">
+			<br><br>
+			<p style="font-size: 22px;">Да у вас же лапки! Единственное, на что вы способны — попросить маму завязать вам шнурки!</p>
+			<a target="_blank" href="https://vk.com/share.php?url=http://g-utka.ru&title=Попросите маму завязать вам шнурки! Тест «Гадкого утенка» по узлам&&image=https://pp.userapi.com/c323827/v323827600/1586/QTNSFdxitcI.jpg"><img src="../../assets/img/vk_icon.png"></a>
+			<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?http://www.g-utka.ru"><img src="../../assets/img/fb_icon.svg"></a>
+		
 		</div>
+		<div	*ngIf="score > 2 && score <= 5">
+			<img style="max-width:750px;" src="/assets/img/grandma.jpg">
+			<br><br>
+			<p style="font-size: 22px;">Вы явно умеете вязать. Спицами и крючком. Но вряд ли выиграете первенство по узлам.</p>
+		</div>
+		<div	*ngIf="score > 5 && score <= 8">
+			<img style="max-width:750px;" src="/assets/img/ylvis.jpg">
+			<br><br>
+			<p style="font-size: 22px;">Похоже, вы знаете, как завязать все узлы в мире. Кроме одного...</p>
+		</div>
+		<div	*ngIf="score > 8 && score <= 10">
+			<img style="max-width:750px;" src="/assets/img/lelik.jpg">
+			<br><br>
+			<p style="font-size: 22px;">Знаете все узлы, как свои пять пальцев и готовы каждый год побеждать в первенстве. Вяжете даже на лыжах!	</p>
+		</div>
+
+		<br><br>
+
+		
+		<br><br>
+
 	</div>
+</div>
 </div>

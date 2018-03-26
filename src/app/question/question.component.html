@@ -1,4 +1,8 @@
 <div>
+  
+  <iframe  *ngIf="question.vid" width="660" height="415" src="https://www.youtube.com/embed/TUHgGK-tImY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <img style="max-width:600px;" src="{{question.image}}">
+    <br><br>
     <h1>{{question.desc}}</h1>
     <app-answer
       *ngFor="let a of question.answers"
@@ -9,4 +13,5 @@
       >
     </app-answer>
     <button *ngIf="disabled" (click)="finishQuestion(question)">Продолжить</button>
+    <br><br><br><br>
   </div>
